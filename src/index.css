@@ -1,0 +1,33 @@
+@import '@fontsource-variable/dm-sans';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/roboto-flex';
+@import '@fontsource/source-sans-3/400.css';
+@import '@fontsource/source-sans-3/600.css';
+@import '@fontsource/source-sans-3/700.css';
+@import '@fontsource-variable/ibm-plex-sans';
+@import '@fontsource-variable/lora';
+@import '@fontsource-variable/merriweather';
+@import '@fontsource/dm-serif-display/400.css';
+@import '@fontsource/dm-serif-display/400-italic.css';
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans Variable', Arial, sans-serif;
+  --font-editorial: 'DM Serif Display', Georgia, serif;
+  --color-ink: #152238;
+  --color-brand: #315f9e;
+  --color-paper: #faf9f6;
+  --color-muted: #687487;
+  --color-line: #e4e3de;
+}
+
+@layer base {
+  * { @apply box-border; }
+  html { @apply scroll-smooth; }
+  body { @apply m-0 min-w-[360px] bg-paper font-sans text-ink antialiased; }
+  button, input, textarea { font: inherit; }
+  button { @apply cursor-pointer; }
+  button:focus-visible, input:focus-visible, textarea:focus-visible { @apply outline-2 outline-offset-2 outline-brand; }
+  a { @apply text-inherit; }
+  ::selection { @apply bg-blue-100 text-blue-950; }
+}
